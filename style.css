@@ -39,6 +39,9 @@ footer { text-align: center; padding: 50px; background: #0d0d0d; color: #888; }
     position: relative;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #bg-video {
@@ -95,12 +98,18 @@ footer { text-align: center; padding: 50px; background: #0d0d0d; color: #888; }
     width: 90%;   /* one card per row */
   }
 
+  #hero {
+    height: 60vh; /* reduce header height on phones */
+  }
   .hero-text h1 {
     font-size: 2rem;  /* smaller heading */
   }
 
   .hero-text p {
     font-size: 1rem;  /* smaller subtitle */
+  }
+  .hero-text {
+    padding: 10px 20px; /* reduce padding */
   }
 }
 
