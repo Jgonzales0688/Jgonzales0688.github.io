@@ -18,7 +18,7 @@ section h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; color: 
 .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
 /* Project Cards */
-.project-card { background: #1a1a1a; padding: 20px; border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+.project-card { background: #1a1a1a; padding: 20px; border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; width: 90%; max-width: 250px; margin: 0 auto;}
 .project-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(255,76,96,0.3); }
 .project-card h3 { margin-bottom: 10px; color: #fff; }
 .project-card p { color: #ccc; }
@@ -72,4 +72,41 @@ footer { text-align: center; padding: 50px; background: #0d0d0d; color: #888; }
 
 .hero-text p {
     font-size: 4rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;  /* smaller gap for mobile */
+  padding: 20px;
+}
+
+/* For tablets and smaller phones */
+@media screen and (max-width: 768px) {
+  .project-card {
+    width: 45%;   /* two cards per row */
+  }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+  .project-card {
+    width: 90%;   /* one card per row */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;  /* smaller heading */
+  }
+
+  .hero-text p {
+    font-size: 1rem;  /* smaller subtitle */
+  }
+}
+
+.project-card img, 
+#hero video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
