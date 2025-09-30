@@ -119,3 +119,126 @@ footer { text-align: center; padding: 50px; background: #0d0d0d; color: #888; }
   height: auto;
   object-fit: cover;
 }
+
+/* About Section */
+#about {
+  background: #0a0a0a;
+  padding: 60px 20px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+#about p {
+  margin-bottom: 15px;
+}
+
+#about h3 {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.skills-list li {
+  margin: 10px 0;
+  background: rgba(0,0,0,0.05);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Call to action inside About */
+.about-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.about-cta .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #ff4081;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.about-cta .btn:hover {
+  background: #e73370;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+  #about h2 {
+    font-size: 1.8rem;
+  }
+  #about h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Resume Page */
+.resume {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+}
+
+.resume-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.resume-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #555;
+}
