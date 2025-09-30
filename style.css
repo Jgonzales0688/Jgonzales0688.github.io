@@ -3,12 +3,12 @@
 body { background: #0d0d0d; color: #fff; scroll-behavior: smooth; }
 
 /* Navigation */
-nav { position: fixed; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.9); z-index: 100; }
+nav { position: fixed; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.9); z-index: 9999; }
 nav a { color: #fff; margin-left: 30px; text-decoration: none; font-weight: 600; transition: color 0.3s; }
 nav a:hover { color: #ff4c60; }
 
 /* Header */
-header { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+header { height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
 header h1 { font-size: 4rem; margin-bottom: 20px; animation: fadeInDown 1s ease-out; }
 header p { font-size: 1.5rem; max-width: auto; animation: fadeInUp 1s ease-out; }
 
