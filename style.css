@@ -23,14 +23,14 @@ nav {
     z-index: 9999; 
 }
 nav a { 
-    color: #fff; 
+    color: #e676dc; 
     margin-left: 30px; 
     text-decoration: none; 
     font-weight: 600; 
     transition: color 0.3s; }    
     
 nav a:hover { 
-    color: #ff4c60; 
+    color: #e676dc; 
 }
 
 /* Header */
@@ -55,13 +55,23 @@ header p {
 
 /* Sections */
 section { 
-    padding: 100px 50px; 
+    padding: 50px 50px; 
 }
 section h2 { 
     font-size: 2.5rem; 
     margin-bottom: 50px; 
     text-align: center; 
-    color: #ff4c60; 
+    color: #e676dc; 
+}
+#projects{
+    background: url('assets/resumePattern_bg.jpg') repeat;
+    background-size: auto; 
+}
+#projects h2{
+    background: rgba(0, 0, 0, 0.5); /* black box at 50% transparency */
+    padding: 10px;
+    border-radius: 12px; 
+    display: center;
 }
 .projects { 
     display: grid; 
@@ -127,7 +137,7 @@ footer {
     header p { font-size: 1.2rem; } 
 }
 .highlight { 
-    color:#ff4c60; 
+    color:#e676dc; 
     text-decoration: none; }
 
 /* background vieo */
@@ -158,13 +168,14 @@ footer {
     color: white;
     background: rgba(0, 0, 0, 0.5); /* black box at 50% transparency */
     padding: 10px;
-    border-radius: 12px; /* optional rounded corners */
+    border-radius: 12px; 
     display: inline-block;
 }
 
 .hero-text h1 {
     font-size: 8rem;
     margin: 0;
+    color:#e676dc;
 }
 
 .hero-text p {
@@ -189,21 +200,21 @@ footer {
 /* For mobile phones */
 @media screen and (max-width: 480px) {
   .project-card {
-    width: 90%;   /* one card per row */
+    width: 90%;   
   }
 
   #hero {
-    height: 60vh; /* reduce header height on phones */
+    height: 60vh; 
   }
   .hero-text h1 {
-    font-size: 2rem;  /* smaller heading */
+    font-size: 2rem;  
   }
 
   .hero-text p {
-    font-size: 1rem;  /* smaller subtitle */
+    font-size: 1rem;  
   }
   .hero-text {
-    padding: 10px 20px; /* reduce padding */
+    padding: 10px 20px; 
   }
 }
 
@@ -216,7 +227,7 @@ footer {
 
 /* About Section */
 #about {
-  background: #0a0a0a;
+  background: #0a0009;
   padding: 60px 20px;
 }
 
@@ -231,6 +242,7 @@ footer {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 20px;
+  color: #e676dc;
 }
 
 #about p {
@@ -265,7 +277,7 @@ footer {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 25px;
-  background: #ff4081;
+  background: #e676dc;
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -287,61 +299,75 @@ footer {
 }
 
 /* Resume Page */
+body.resume-page {
+  background: url('assets/resumePattern_bg.jpg') repeat;
+  background-size: auto; 
+}
+
 .resume {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
   line-height: 1.6;
-  background: url('assets/resumePattern_bg.jpg') repeat;
-  border-radius: 200px;
+  background: rgba(0, 0, 0, 0.6); 
+  border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1;
 }
-
-.resume > * {
-    position: relative;
-    z-index: 1;
-}
 .resume-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .resume-header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: #e676dc;
 }
 
 .resume-header p {
-  font-size: 1.2rem;
-  color: #555;
+  font-size: 1.3rem;
+  color: #ccc;
 }
 
 .resume-section {
-  margin-bottom: 2rem;
+  padding-left: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
 }
+.resume-section:nth-child(2) { animation-delay: 0.1s; }
+.resume-section:nth-child(3) { animation-delay: 0.2s; }
+.resume-section:nth-child(4) { animation-delay: 0.3s; }
+.resume-section:nth-child(5) { animation-delay: 0.4s; }
 
 .resume-section h2 {
+  font-size: 1.8rem;
+  color: #e676dc;
+  margin-bottom: 0.5 rem;
   border-bottom: 2px solid #ddd;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
 }
 
-.resume-section ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
+.resume-section ul li {
+  margin-bottom: 0.8rem;
+  color: #ddd;
 }
 
 .btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.7rem 1.5rem;
-  background: #333;
+  background: #e676dc;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
+  transition: background 0.2s ease;
 }
 
 .btn:hover {
-  background: #555;
+  background: #e676dc;
+}
+.logo{
+    color: #e676dc;
 }
