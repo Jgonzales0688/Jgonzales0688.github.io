@@ -371,3 +371,24 @@ body.resume-page {
 .logo{
     color: #e676dc;
 }
+
+/* WIP project cards */
+.project-card--wip {
+  opacity: 0.75;
+  border: 1px dashed #e676dc;
+  position: relative;
+}
+
+.wip-badge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  background: #e676dc22;
+  color: #e676dc;
+  border: 1px solid #e676dc;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
