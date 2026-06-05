@@ -160,5 +160,85 @@
   </footer>
 
   <!--<script src="script.js"></script>-->
+
+  <!-- Rubber Ducks -->
+  <canvas id="duck-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;"></canvas>
+  <script>
+    (function() {
+      const canvas = document.getElementById('duck-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const TOTAL = 28;
+      const GRAVITY = 0.22;
+      const ducks = [];
+      let spawned = 0;
+
+      const img = new Image();
+      img.src = 'assets/rubberDuckWglasses.png';
+
+      img.onload = function() {
+        function spawnDuck() {
+          const size = 110 + Math.random() * 70;
+          ducks.push({
+            x: size + Math.random() * (canvas.width - size * 2),
+            y: -size * 1.5,
+            vy: 2.5 + Math.random() * 2.5,
+            vx: (Math.random() - 0.5) * 1.0,
+            size,
+            rotation: (Math.random() - 0.5) * 0.3,
+            spin: (Math.random() - 0.5) * 0.016,
+            bounced: false,
+          });
+          spawned++;
+        }
+
+        function loop() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          for (let i = ducks.length - 1; i >= 0; i--) {
+            const d = ducks[i];
+
+            d.vy += GRAVITY;
+            d.y  += d.vy;
+            d.x  += d.vx;
+            d.rotation += d.spin;
+
+            const floor = canvas.height - d.size * 0.5;
+            if (!d.bounced && d.y >= floor) {
+              d.y  = floor;
+              d.vy = -Math.abs(d.vy) * 0.42;
+              d.spin *= 0.35;
+              d.bounced = true;
+            }
+
+            if (d.bounced && d.y > canvas.height + d.size) {
+              ducks.splice(i, 1);
+              continue;
+            }
+
+            ctx.save();
+            ctx.translate(d.x, d.y);
+            ctx.rotate(d.rotation);
+            ctx.drawImage(img, -d.size / 2, -d.size / 2, d.size, d.size);
+            ctx.restore();
+          }
+
+          if (spawned < TOTAL || ducks.length > 0) {
+            requestAnimationFrame(loop);
+          }
+        }
+
+        function scheduleSpawn() {
+          spawnDuck();
+          if (spawned < TOTAL) setTimeout(scheduleSpawn, 75 + Math.random() * 65);
+        }
+
+        scheduleSpawn();
+        loop();
+      };
+    })();
+  </script>
 </body>
 </html>

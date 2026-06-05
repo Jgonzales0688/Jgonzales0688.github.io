@@ -354,6 +354,15 @@ body.resume-page {
   color: #ddd;
 }
 
+.resume a:not(.btn) {
+  color: #e676dc;
+  text-decoration: none;
+}
+
+.resume a:not(.btn):hover {
+  text-decoration: underline;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
